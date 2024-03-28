@@ -7,6 +7,8 @@ WORKDIR /project
 # Copy package files in container currunt direcctory
 COPY --chown=1001:1001 package.json package-lock.json ./
 
+# Install Angular cli
+RUN npm install -g @angular/cli
 
 # Install all Angular dependacies
 RUN npm ci
